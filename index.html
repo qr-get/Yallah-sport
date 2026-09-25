@@ -1157,12 +1157,77 @@
             } catch (e) {}
         }
 
-        // Automatically detect the mobile/browser language.
-        applyLanguage();
+        // Apply language and update active button
+        function setActiveLanguageButton(lang) {
+            document.querySelectorAll(".lang-btn").forEach(btn => {
+                btn.classList.toggle("active", btn.dataset.lang === lang);
+            });
+        }
+
+        function applyLanguage(lang = detectLanguage()) {
+            const t = translations[lang] || translations.en;
+
+            document.getElementById("title").textContent = t.title;
+            document.getElementById("location").textContent = t.location;
+            document.getElementById("subtitle").textContent = t.subtitle;
+
+            const footer = document.getElementById("footer");
+            if (footer) {
+                const firstTextNode = Array.from(footer.childNodes)
+                    .find(node => node.nodeType === Node.TEXT_NODE);
+                if (firstTextNode) firstTextNode.textContent = t.footer;
+            }
+
+            document.querySelectorAll("[data-key]").forEach(element => {
+                const key = element.getAttribute("data-key");
+                if (t[key]) {
+                    element.textContent = t[key];
+                }
+            });
+
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+            setActiveLanguageButton(lang);
+
+            try {
+                localStorage.setItem("preferredLanguage", lang);
+            } catch (e) {}
+        }
+
+        // Manual language buttons
+        document.querySelectorAll(".lang-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const lang = button.dataset.lang;
+                if (translations[lang]) {
+                    applyLanguage(lang);
+                }
+            });
+        });
+
+        // Automatically detect the mobile/browser language on first load.
+        let initialLanguage = null;
+        try {
+            initialLanguage = localStorage.getItem("preferredLanguage");
+        } catch (e) {}
+
+        // Use saved language only if it exists; otherwise detect device/browser language.
+        applyLanguage(
+            initialLanguage && translations[initialLanguage]
+                ? initialLanguage
+                : detectLanguage()
+        );
 
         // If the device language changes while the page is open, update it.
         window.addEventListener("languagechange", () => {
-            applyLanguage(detectLanguage());
+            let savedLanguage = null;
+            try {
+                savedLanguage = localStorage.getItem("preferredLanguage");
+            } catch (e) {}
+
+            if (!savedLanguage) {
+                applyLanguage(detectLanguage());
+            }
         });
     </script>
 
