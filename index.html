@@ -551,6 +551,14 @@
         }
 
 
+
+        /* LANGUAGE SWITCHER */
+        .language-switcher{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 18px;direction:ltr}
+        .lang-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:76px;height:38px;padding:6px 10px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.10);color:#fff;font-family:"Cairo",sans-serif;font-size:12px;font-weight:600;cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:.25s}
+        .lang-btn:hover,.lang-btn.active{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.42);transform:translateY(-2px)}
+        .lang-btn .flag{font-size:17px;line-height:1}
+        @media(max-width:500px){.language-switcher{gap:6px}.lang-btn{min-width:68px;height:35px;font-size:11px}.lang-btn .flag{font-size:15px}}
+
         /* =====================================================
            FOOTER
         ===================================================== */
@@ -785,164 +793,19 @@
         </p>
 
 
+
+        <!-- LANGUAGE SWITCHER -->
+        <div class="language-switcher" aria-label="Language selector">
+            <button class="lang-btn" type="button" data-lang="ar"><span class="flag">🇪🇬</span> العربية</button>
+            <button class="lang-btn" type="button" data-lang="en"><span class="flag">🇬🇧</span> English</button>
+            <button class="lang-btn" type="button" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</button>
+            <button class="lang-btn" type="button" data-lang="fr"><span class="flag">🇫🇷</span> Français</button>
+            <button class="lang-btn" type="button" data-lang="sl"><span class="flag">🇸🇮</span> Slovenščina</button>
+        </div>
+
         <!-- LINKS -->
 
         <div class="links">
-
-
-            <!-- FACEBOOK -->
-
-            <a
-                class="link facebook"
-                href="https://www.facebook.com/share/1NfqqtnhaP/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <i class="fa-brands fa-facebook-f main-icon"></i>
-
-                <span data-key="facebook">
-                    فيسبوك
-                </span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-
-
-            <!-- INSTAGRAM -->
-
-            <a
-                class="link instagram"
-                href="https://www.instagram.com/yallah_sport/?__pwa=1"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <i class="fa-brands fa-instagram main-icon"></i>
-
-                <span data-key="instagram">
-                    إنستجرام
-                </span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-
-
-
-            <!-- YOUTUBE -->
-
-            <a
-                class="link youtube"
-                href="https://youtube.com/@yallahsportkitesafariegypt5395?si=5M7XmbE5Xms5P9Wy"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <i class="fa-brands fa-youtube main-icon"></i>
-
-                <span data-key="youtube">
-                    يوتيوب
-                </span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-
-
-            <!-- WEBSITE -->
-
-            <a
-                class="link website"
-                href="https://yallah-sport.com/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <i class="fa-solid fa-globe main-icon"></i>
-
-                <span data-key="website">
-                    الموقع الإلكتروني
-                </span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-
-
-            <!-- WHATSAPP -->
-
-            <a
-                class="link whatsapp"
-                href="https://wa.me/+201004016111"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <i class="fa-brands fa-whatsapp main-icon"></i>
-
-                <span data-key="whatsapp">
-                    واتساب
-                </span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-
-
-            <!-- PHONE -->
-
-            <a
-                class="link phone"
-                href="tel:+38669970563">
-
-                <i class="fa-solid fa-phone main-icon"></i>
-
-                <span data-key="phone">
-                    اتصل بنا
-                </span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-
-
-            <!-- EMAIL -->
-
-            <a
-                class="link email"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info%40yallah-sport.com" target="_blank" rel="noopener noreferrer">
-
-                <i class="fa-solid fa-envelope main-icon"></i>
-
-                <span data-key="email">Email</span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
-             <a
-                class="link email"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mosty.hurghada%40gmail.com" target="_blank" rel="noopener noreferrer">
-
-                <i class="fa-solid fa-envelope main-icon"></i>
-
-                <span data-key="info">Info</span>
-
-                <span class="arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </span>
-
-            </a>
 
 <!-- GOOGLE REVIEW -->
 
@@ -963,6 +826,155 @@
                 </span>
 
             </a>
+
+<!-- FACEBOOK -->
+
+            <a
+                class="link facebook"
+                href="https://www.facebook.com/share/1NfqqtnhaP/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-facebook-f main-icon"></i>
+
+                <span data-key="facebook">
+                    فيسبوك
+                </span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+<!-- INSTAGRAM -->
+
+            <a
+                class="link instagram"
+                href="https://www.instagram.com/yallah_sport/?__pwa=1"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-instagram main-icon"></i>
+
+                <span data-key="instagram">
+                    إنستجرام
+                </span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+<!-- YOUTUBE -->
+
+            <a
+                class="link youtube"
+                href="https://youtube.com/@yallahsportkitesafariegypt5395?si=5M7XmbE5Xms5P9Wy"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-youtube main-icon"></i>
+
+                <span data-key="youtube">
+                    يوتيوب
+                </span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+<!-- WEBSITE -->
+
+            <a
+                class="link website"
+                href="https://yallah-sport.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-solid fa-globe main-icon"></i>
+
+                <span data-key="website">
+                    الموقع الإلكتروني
+                </span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+<!-- WHATSAPP -->
+
+            <a
+                class="link whatsapp"
+                href="https://wa.me/+201004016111"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-whatsapp main-icon"></i>
+
+                <span data-key="whatsapp">
+                    واتساب
+                </span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+<!-- PHONE -->
+
+            <a
+                class="link phone"
+                href="tel:+38669970563">
+
+                <i class="fa-solid fa-phone main-icon"></i>
+
+                <span data-key="phone">
+                    اتصل بنا
+                </span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+
+
+<a
+                class="link email"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info%40yallah-sport.com" target="_blank" rel="noopener noreferrer">
+
+                <i class="fa-solid fa-envelope main-icon"></i>
+
+                <span data-key="info">Info</span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
+<a
+                class="link email"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mosty.hurghada%40gmail.com" target="_blank" rel="noopener noreferrer">
+
+                <i class="fa-solid fa-envelope main-icon"></i>
+
+                <span data-key="Private email">PrivateEmail</span>
+
+                <span class="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+            </a>
+
 
         </div>
 
