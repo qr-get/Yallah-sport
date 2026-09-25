@@ -970,7 +970,7 @@
         <!-- FOOTER -->
 
         <div
-            class="footer">
+            class="footer" id="footer">
         Des. by: Mansour khalifa<br><a href="https://link.gettap.co/mnswrkhlyfh8103175" 
         target="_blank">Get in touch with us</a>
     </div>
@@ -985,9 +985,16 @@
          AUTO LANGUAGE SCRIPT
     ===================================================== -->
     <script>
+        /* =====================================================
+           AUTO LANGUAGE
+           Supported:
+           Arabic - English - German - Russian
+           French - Slovenian
+        ===================================================== */
+
         const translations = {
             ar: {
-                title: "KITE SURF",
+                title: "YALLAH SPORT",
                 location: "الغردقة، البحر الأحمر",
                 subtitle: "كل ما تحتاجه لعالم الـ Kite Surf",
                 facebook: "فيسبوك",
@@ -995,13 +1002,14 @@
                 youtube: "يوتيوب",
                 website: "الموقع الإلكتروني",
                 whatsapp: "واتساب",
-                phone: "اتصل بنا",  
+                phone: "اتصل بنا",
                 email: "Email",
                 info: "Info",
                 maps: "موقعنا على الخريطة",
                 review: "قيّمنا على Google",
-                footer: "© 2026 جميع الحقوق محفوظة"
+                footer: "Des. by: Mansour khalifa  "
             },
+
             en: {
                 title: "YALLAH SPORT",
                 location: "Hurghada, Red Sea",
@@ -1009,15 +1017,16 @@
                 facebook: "Facebook",
                 instagram: "Instagram",
                 youtube: "YouTube",
-                website: " Website",
+                website: "Official Website",
                 whatsapp: "WhatsApp",
                 phone: "Call Us",
                 email: "Email",
                 info: "Info",
                 maps: "Find Us on Google Maps",
                 review: "Review Us on Google",
-                footer: "© 2026 All Rights Reserved"
+                footer: "Des. by: Mansour khalifa  "
             },
+
             de: {
                 title: "YALLAH SPORT",
                 location: "Hurghada, Rotes Meer",
@@ -1028,12 +1037,13 @@
                 website: "Offizielle Website",
                 whatsapp: "WhatsApp",
                 phone: "Anrufen",
-                email: "Email",
+                email: "E-Mail",
                 info: "Info",
                 maps: "Unser Standort auf Google Maps",
                 review: "Auf Google bewerten",
-                footer: "© 2026 Alle Rechte vorbehalten"
+                footer: "Des. by: Mansour khalifa  "
             },
+
             ru: {
                 title: "YALLAH SPORT",
                 location: "Хургада, Красное море",
@@ -1044,39 +1054,104 @@
                 website: "Официальный сайт",
                 whatsapp: "WhatsApp",
                 phone: "Позвонить",
-                email: "Email",
-                info: "Info",
+                email: "Электронная почта",
+                info: "Информация",
                 maps: "Мы на Google Картах",
                 review: "Оставить отзыв в Google",
-                footer: "© 2026 Все права защищены"
+                footer: "Des. by: Mansour khalifa  "
+            },
+
+            fr: {
+                title: "YALLAH SPORT",
+                location: "Hurghada, Mer Rouge",
+                subtitle: "Tout ce dont vous avez besoin pour le Kite Surf",
+                facebook: "Facebook",
+                instagram: "Instagram",
+                youtube: "YouTube",
+                website: "Site officiel",
+                whatsapp: "WhatsApp",
+                phone: "Appelez-nous",
+                email: "E-mail",
+                info: "Informations",
+                maps: "Nous trouver sur Google Maps",
+                review: "Nous évaluer sur Google",
+                footer: "Des. by: Mansour khalifa  "
+            },
+
+            sl: {
+                title: "YALLAH SPORT",
+                location: "Hurgada, Rdeče morje",
+                subtitle: "Vse, kar potrebujete za kajtanje",
+                facebook: "Facebook",
+                instagram: "Instagram",
+                youtube: "YouTube",
+                website: "Uradna spletna stran",
+                whatsapp: "WhatsApp",
+                phone: "Pokličite nas",
+                email: "E-pošta",
+                info: "Informacije",
+                maps: "Poiščite nas na Google Zemljevidih",
+                review: "Ocenite nas na Googlu",
+                footer: "Des. by: Mansour khalifa  "
             }
         };
 
-        function applyLanguage() {
-            const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+        function detectLanguage() {
+            const languages = [
+                ...(navigator.languages || []),
+                navigator.language || navigator.userLanguage || "en"
+            ];
 
-            let lang = "en";
-            if (browserLang.startsWith("ar")) lang = "ar";
-            else if (browserLang.startsWith("de")) lang = "de";
-            else if (browserLang.startsWith("ru")) lang = "ru";
+            for (const browserLang of languages) {
+                const lang = browserLang.toLowerCase();
 
-            const t = translations[lang];
+                if (lang.startsWith("ar")) return "ar";
+                if (lang.startsWith("fr")) return "fr";
+                if (lang.startsWith("sl")) return "sl";
+                if (lang.startsWith("de")) return "de";
+                if (lang.startsWith("ru")) return "ru";
+                if (lang.startsWith("en")) return "en";
+            }
+
+            return "en";
+        }
+
+        function applyLanguage(lang = detectLanguage()) {
+            const t = translations[lang] || translations.en;
 
             document.getElementById("title").textContent = t.title;
             document.getElementById("location").textContent = t.location;
             document.getElementById("subtitle").textContent = t.subtitle;
-            document.getElementById("footer").textContent = t.footer;
+
+            const footer = document.getElementById("footer");
+            if (footer) {
+                footer.firstChild.textContent = t.footer;
+            }
 
             document.querySelectorAll("[data-key]").forEach(element => {
                 const key = element.getAttribute("data-key");
-                if (t[key]) element.textContent = t[key];
+
+                if (t[key]) {
+                    element.textContent = t[key];
+                }
             });
 
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+            // Save the detected language for the current device.
+            try {
+                localStorage.setItem("preferredLanguage", lang);
+            } catch (e) {}
         }
 
+        // Automatically detect the mobile/browser language.
         applyLanguage();
+
+        // If the device language changes while the page is open, update it.
+        window.addEventListener("languagechange", () => {
+            applyLanguage(detectLanguage());
+        });
     </script>
 
 </body>
