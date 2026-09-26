@@ -20,10 +20,6 @@
 
     <style>
 
-        /* =====================================================
-           RESET
-        ===================================================== */
-
         * {
             margin: 0;
             padding: 0;
@@ -59,10 +55,7 @@
             background: #062c3d;
         }
 
-
-        /* =====================================================
-           BACKGROUND
-        ===================================================== */
+        /* BACKGROUND */
 
         body::before {
             content: "";
@@ -93,7 +86,6 @@
         }
 
         @keyframes backgroundZoom {
-
             0% {
                 transform: scale(1);
             }
@@ -103,10 +95,7 @@
             }
         }
 
-
-        /* =====================================================
-           SOFT OVERLAY
-        ===================================================== */
+        /* OVERLAY */
 
         body::after {
             content: "";
@@ -127,10 +116,7 @@
             pointer-events: none;
         }
 
-
-        /* =====================================================
-           PAGE
-        ===================================================== */
+        /* PAGE */
 
         .page {
             width: 100%;
@@ -145,7 +131,6 @@
         }
 
         @keyframes pageAppear {
-
             from {
                 opacity: 0;
                 transform: translateY(25px);
@@ -157,14 +142,9 @@
             }
         }
 
-
-
-        /* =====================================================
-           KITE ICON
-        ===================================================== */
+        /* ICON */
 
         .kite-icon {
-
             width: 55px;
             height: 55px;
 
@@ -192,16 +172,12 @@
         }
 
         .kite-icon i {
-
             font-size: 22px;
-
             color: white;
-
             opacity: 0.95;
         }
 
         @keyframes softFloat {
-
             0%,
             100% {
                 transform: translateY(0);
@@ -212,13 +188,9 @@
             }
         }
 
-
-        /* =====================================================
-           LOGO
-        ===================================================== */
+        /* LOGO */
 
         .logo {
-
             width: 150px;
             height: 150px;
 
@@ -243,7 +215,6 @@
         }
 
         .logo img {
-
             width: 100%;
             height: 100%;
 
@@ -254,13 +225,9 @@
             display: block;
         }
 
-
-        /* =====================================================
-           TITLE
-        ===================================================== */
+        /* TITLE */
 
         .title {
-
             font-family:
                 "Montserrat",
                 "Cairo",
@@ -279,13 +246,9 @@
             margin-bottom: 4px;
         }
 
-
-        /* =====================================================
-           LOCATION
-        ===================================================== */
+        /* LOCATION */
 
         .location {
-
             display: flex;
 
             justify-content: center;
@@ -302,20 +265,15 @@
         }
 
         .location i {
-
             color:
                 var(--turquoise);
 
             font-size: 13px;
         }
 
-
-        /* =====================================================
-           SUBTITLE
-        ===================================================== */
+        /* SUBTITLE */
 
         .subtitle {
-
             font-size: 12px;
 
             font-weight: 400;
@@ -326,22 +284,84 @@
             margin-bottom: 24px;
         }
 
+        /* LANGUAGE SWITCHER */
 
-        /* =====================================================
-           LINKS
-        ===================================================== */
+        .language-switcher {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 18px;
+            direction: ltr;
+        }
+
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+
+            min-width: 76px;
+            height: 38px;
+
+            padding: 6px 10px;
+
+            border:
+                1px solid rgba(255,255,255,.22);
+
+            border-radius: 12px;
+
+            background:
+                rgba(255,255,255,.10);
+
+            color: #fff;
+
+            font-family:
+                "Cairo",
+                sans-serif;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            backdrop-filter:
+                blur(12px);
+
+            -webkit-backdrop-filter:
+                blur(12px);
+
+            transition:
+                .25s;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background:
+                rgba(255,255,255,.22);
+
+            border-color:
+                rgba(255,255,255,.42);
+
+            transform:
+                translateY(-2px);
+        }
+
+        .lang-btn .flag {
+            font-size: 17px;
+            line-height: 1;
+        }
+
+        /* LINKS */
 
         .links {
-
             display: flex;
-
             flex-direction: column;
-
             gap: 10px;
         }
 
         .link {
-
             min-height: 57px;
 
             position: relative;
@@ -386,11 +406,7 @@
             overflow: hidden;
         }
 
-
-        /* خط ناعم داخل الزر */
-
         .link::after {
-
             content: "";
 
             position: absolute;
@@ -414,9 +430,7 @@
                 opacity 0.3s ease;
         }
 
-
         .link:hover {
-
             transform:
                 translateY(-3px);
 
@@ -435,18 +449,14 @@
             opacity: 1;
         }
 
-
         .link:active {
-            transform: scale(0.98);
+            transform:
+                scale(0.98);
         }
 
-
-        /* =====================================================
-           MAIN ICON
-        ===================================================== */
+        /* MAIN ICON */
 
         .main-icon {
-
             position: absolute;
 
             right: 20px;
@@ -458,13 +468,9 @@
             text-align: center;
         }
 
-
-        /* =====================================================
-           ARROW
-        ===================================================== */
+        /* ARROW */
 
         .arrow {
-
             position: absolute;
 
             left: 20px;
@@ -479,40 +485,30 @@
         }
 
         .link:hover .arrow {
-
             transform:
                 translateX(-4px);
 
             opacity: 0.9;
         }
 
-
-        /* =====================================================
-           LTR
-        ===================================================== */
+        /* LTR */
 
         html[dir="ltr"] .main-icon {
-
             right: auto;
             left: 20px;
         }
 
         html[dir="ltr"] .arrow {
-
             left: auto;
             right: 20px;
         }
 
         html[dir="ltr"] .link:hover .arrow {
-
             transform:
                 translateX(4px);
         }
 
-
-        /* =====================================================
-           ICON COLORS
-        ===================================================== */
+        /* ICON COLORS */
 
         .facebook .main-icon {
             color: #1877f2;
@@ -542,29 +538,13 @@
             color: #7ee787;
         }
 
-        .maps .main-icon {
-            color: #4fc3f7;
-        }
-
         .review .main-icon {
             color: #ffd700;
         }
 
-
-
-        /* LANGUAGE SWITCHER */
-        .language-switcher{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 18px;direction:ltr}
-        .lang-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:76px;height:38px;padding:6px 10px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.10);color:#fff;font-family:"Cairo",sans-serif;font-size:12px;font-weight:600;cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:.25s}
-        .lang-btn:hover,.lang-btn.active{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.42);transform:translateY(-2px)}
-        .lang-btn .flag{font-size:17px;line-height:1}
-        @media(max-width:500px){.language-switcher{gap:6px}.lang-btn{min-width:68px;height:35px;font-size:11px}.lang-btn .flag{font-size:15px}}
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+        /* FOOTER */
 
         .footer {
-
             margin-top: 22px;
 
             font-size: 10px;
@@ -573,13 +553,20 @@
                 rgba(255, 255, 255, 0.55);
         }
 
+        .footer a {
+            color:
+                rgba(255,255,255,0.65);
 
-        /* =====================================================
-           SMALL DECORATION
-        ===================================================== */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* BOTTOM LINE */
 
         .bottom-line {
-
             width: 45px;
             height: 2px;
 
@@ -598,15 +585,11 @@
             opacity: 0.75;
         }
 
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+        /* MOBILE */
 
         @media (max-width: 500px) {
 
             body {
-
                 padding:
                     18px
                     12px
@@ -618,7 +601,6 @@
             }
 
             .logo {
-
                 width: 125px;
                 height: 125px;
 
@@ -639,7 +621,6 @@
             }
 
             .link {
-
                 min-height: 55px;
 
                 border-radius: 14px;
@@ -666,10 +647,7 @@
             }
         }
 
-
-        /* =====================================================
-           SMALL DEVICES
-        ===================================================== */
+        /* SMALL DEVICES */
 
         @media (max-width: 360px) {
 
@@ -678,13 +656,11 @@
             }
 
             .kite-icon {
-
                 width: 48px;
                 height: 48px;
             }
 
             .logo {
-
                 width: 110px;
                 height: 110px;
             }
@@ -694,17 +670,12 @@
             }
 
             .link {
-
                 min-height: 52px;
-
                 font-size: 12px;
             }
         }
 
-
-        /* =====================================================
-           REDUCE MOTION
-        ===================================================== */
+        /* REDUCE MOTION */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -726,48 +697,29 @@
     </style>
 </head>
 
-
 <body>
 
-
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
-
     <main class="page">
-<!-- KITE ICON -->
+
+        <!-- KITE ICON -->
 
         <div class="kite-icon">
-
             <i class="fa-solid fa-parachute-box"></i>
-
         </div>
-
 
         <!-- LOGO -->
 
         <div class="logo">
-
-            <!-- ضع اللوجو هنا باسم logo.png -->
-
             <img
                 src="logo.png"
-                alt="Kite Surf Hurghada">
-
+                alt="Yallah Sport">
         </div>
-
 
         <!-- TITLE -->
 
-        <h1
-            class="title"
-            id="title">
-             Mosty M. Badawy
-
-           
-
+        <h1 class="title" id="title">
+            YALLAH SPORT
         </h1>
-
 
         <!-- LOCATION -->
 
@@ -781,33 +733,75 @@
 
         </div>
 
-
         <!-- SUBTITLE -->
 
-        <p
-            class="subtitle"
-            id="subtitle">
-
+        <p class="subtitle" id="subtitle">
             كل ما تحتاجه لعالم الـ Kite Surf
-
         </p>
 
-
-
         <!-- LANGUAGE SWITCHER -->
-        <div class="language-switcher" aria-label="Language selector">
-            <button class="lang-btn" type="button" data-lang="ar"><span class="flag">🇪🇬</span> العربية</button>
-            <button class="lang-btn" type="button" data-lang="en"><span class="flag">🇬🇧</span> English</button>
-            <button class="lang-btn" type="button" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</button>
-            <button class="lang-btn" type="button" data-lang="fr"><span class="flag">🇫🇷</span> Français</button>
-            <button class="lang-btn" type="button" data-lang="sl"><span class="flag">🇸🇮</span> Slovenščina</button>
+
+        <div
+            class="language-switcher"
+            aria-label="Language selector">
+
+            <button
+                class="lang-btn"
+                type="button"
+                data-lang="ar">
+
+                <span class="flag">🇪🇬</span>
+                العربية
+
+            </button>
+
+            <button
+                class="lang-btn"
+                type="button"
+                data-lang="en">
+
+                <span class="flag">🇬🇧</span>
+                English
+
+            </button>
+
+            <button
+                class="lang-btn"
+                type="button"
+                data-lang="de">
+
+                <span class="flag">🇩🇪</span>
+                Deutsch
+
+            </button>
+
+            <button
+                class="lang-btn"
+                type="button"
+                data-lang="fr">
+
+                <span class="flag">🇫🇷</span>
+                Français
+
+            </button>
+
+            <button
+                class="lang-btn"
+                type="button"
+                data-lang="sl">
+
+                <span class="flag">🇸🇮</span>
+                Slovenščina
+
+            </button>
+
         </div>
 
         <!-- LINKS -->
 
         <div class="links">
 
-<!-- GOOGLE REVIEW -->
+            <!-- GOOGLE REVIEW -->
 
             <a
                 class="link review"
@@ -827,7 +821,7 @@
 
             </a>
 
-<!-- FACEBOOK -->
+            <!-- FACEBOOK -->
 
             <a
                 class="link facebook"
@@ -847,7 +841,7 @@
 
             </a>
 
-<!-- INSTAGRAM -->
+            <!-- INSTAGRAM -->
 
             <a
                 class="link instagram"
@@ -867,7 +861,7 @@
 
             </a>
 
-<!-- YOUTUBE -->
+            <!-- YOUTUBE -->
 
             <a
                 class="link youtube"
@@ -887,7 +881,7 @@
 
             </a>
 
-<!-- WEBSITE -->
+            <!-- WEBSITE -->
 
             <a
                 class="link website"
@@ -907,7 +901,7 @@
 
             </a>
 
-<!-- WHATSAPP -->
+            <!-- WHATSAPP -->
 
             <a
                 class="link whatsapp"
@@ -927,7 +921,7 @@
 
             </a>
 
-<!-- PHONE -->
+            <!-- PHONE -->
 
             <a
                 class="link phone"
@@ -945,15 +939,19 @@
 
             </a>
 
+            <!-- INFO EMAIL - GMAIL -->
 
-
-<a
+            <a
                 class="link email"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info%40yallah-sport.com" target="_blank" rel="noopener noreferrer">
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@yallah-sport.com"
+                target="_blank"
+                rel="noopener noreferrer">
 
                 <i class="fa-solid fa-envelope main-icon"></i>
 
-                <span data-key="info">Info</span>
+                <span data-key="info">
+                    Info
+                </span>
 
                 <span class="arrow">
                     <i class="fa-solid fa-arrow-left"></i>
@@ -961,50 +959,57 @@
 
             </a>
 
-<a
+            <!-- PRIVATE EMAIL - GMAIL -->
+
+            <a
                 class="link email"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mosty.hurghada%40gmail.com" target="_blank" rel="noopener noreferrer">
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mosty.hurghada@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer">
 
                 <i class="fa-solid fa-envelope main-icon"></i>
 
-                <span data-key="Private email">PrivateEmail</span>
+                <span data-key="privateEmail">
+                    Private Email
+                </span>
 
                 <span class="arrow">
                     <i class="fa-solid fa-arrow-left"></i>
                 </span>
 
             </a>
-
 
         </div>
 
-
         <!-- FOOTER -->
 
-        <div
-            class="footer" id="footer">
-        Des. by: Mansour khalifa<br><a href="https://link.gettap.co/mnswrkhlyfh8103175" 
-        target="_blank">Get in touch with us</a>
-    </div>
+        <div class="footer" id="footer">
+
+            Des. by: Mansour khalifa
+
+            <br>
+
+            <a
+                href="https://link.gettap.co/mnswrkhlyfh8103175"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Get in touch with us
+
+            </a>
+
         </div>
 
         <div class="bottom-line"></div>
 
     </main>
 
+    <!-- AUTO LANGUAGE SCRIPT -->
 
-    <!-- =====================================================
-         AUTO LANGUAGE SCRIPT
-    ===================================================== -->
     <script>
-        /* =====================================================
-           AUTO LANGUAGE
-           Supported:
-           Arabic - English - German - Russian
-           French - Slovenian
-        ===================================================== */
 
         const translations = {
+
             ar: {
                 title: "YALLAH SPORT",
                 location: "الغردقة، البحر الأحمر",
@@ -1015,11 +1020,10 @@
                 website: "الموقع الإلكتروني",
                 whatsapp: "واتساب",
                 phone: "اتصل بنا",
-                email: "Email",
                 info: "Info",
-                maps: "موقعنا على الخريطة",
+                privateEmail: "البريد الخاص",
                 review: "قيّمنا على Google",
-                footer: "Des. by: Mansour khalifa  "
+                footer: "Des. by: Mansour khalifa"
             },
 
             en: {
@@ -1032,11 +1036,10 @@
                 website: "Official Website",
                 whatsapp: "WhatsApp",
                 phone: "Call Us",
-                email: "Email",
                 info: "Info",
-                maps: "Find Us on Google Maps",
+                privateEmail: "Private Email",
                 review: "Review Us on Google",
-                footer: "Des. by: Mansour khalifa  "
+                footer: "Des. by: Mansour khalifa"
             },
 
             de: {
@@ -1049,28 +1052,10 @@
                 website: "Offizielle Website",
                 whatsapp: "WhatsApp",
                 phone: "Anrufen",
-                email: "E-Mail",
                 info: "Info",
-                maps: "Unser Standort auf Google Maps",
+                privateEmail: "Private E-Mail",
                 review: "Auf Google bewerten",
-                footer: "Des. by: Mansour khalifa  "
-            },
-
-            ru: {
-                title: "YALLAH SPORT",
-                location: "Хургада, Красное море",
-                subtitle: "Всё необходимое для кайтсерфинга",
-                facebook: "Facebook",
-                instagram: "Instagram",
-                youtube: "YouTube",
-                website: "Официальный сайт",
-                whatsapp: "WhatsApp",
-                phone: "Позвонить",
-                email: "Электронная почта",
-                info: "Информация",
-                maps: "Мы на Google Картах",
-                review: "Оставить отзыв в Google",
-                footer: "Des. by: Mansour khalifa  "
+                footer: "Des. by: Mansour khalifa"
             },
 
             fr: {
@@ -1083,11 +1068,10 @@
                 website: "Site officiel",
                 whatsapp: "WhatsApp",
                 phone: "Appelez-nous",
-                email: "E-mail",
-                info: "Informations",
-                maps: "Nous trouver sur Google Maps",
+                info: "Info",
+                privateEmail: "E-mail privé",
                 review: "Nous évaluer sur Google",
-                footer: "Des. by: Mansour khalifa  "
+                footer: "Des. by: Mansour khalifa"
             },
 
             sl: {
@@ -1100,137 +1084,244 @@
                 website: "Uradna spletna stran",
                 whatsapp: "WhatsApp",
                 phone: "Pokličite nas",
-                email: "E-pošta",
-                info: "Informacije",
-                maps: "Poiščite nas na Google Zemljevidih",
+                info: "Info",
+                privateEmail: "Zasebni e-poštni naslov",
                 review: "Ocenite nas na Googlu",
-                footer: "Des. by: Mansour khalifa  "
+                footer: "Des. by: Mansour khalifa"
             }
+
         };
 
+
+        /* DETECT LANGUAGE */
+
         function detectLanguage() {
+
             const languages = [
                 ...(navigator.languages || []),
-                navigator.language || navigator.userLanguage || "en"
+                navigator.language ||
+                navigator.userLanguage ||
+                "en"
             ];
 
             for (const browserLang of languages) {
-                const lang = browserLang.toLowerCase();
 
-                if (lang.startsWith("ar")) return "ar";
-                if (lang.startsWith("fr")) return "fr";
-                if (lang.startsWith("sl")) return "sl";
-                if (lang.startsWith("de")) return "de";
-                if (lang.startsWith("ru")) return "ru";
-                if (lang.startsWith("en")) return "en";
+                const lang =
+                    browserLang.toLowerCase();
+
+                if (lang.startsWith("ar"))
+                    return "ar";
+
+                if (lang.startsWith("fr"))
+                    return "fr";
+
+                if (lang.startsWith("sl"))
+                    return "sl";
+
+                if (lang.startsWith("de"))
+                    return "de";
+
+                if (lang.startsWith("en"))
+                    return "en";
             }
 
             return "en";
         }
 
-        function applyLanguage(lang = detectLanguage()) {
-            const t = translations[lang] || translations.en;
 
-            document.getElementById("title").textContent = t.title;
-            document.getElementById("location").textContent = t.location;
-            document.getElementById("subtitle").textContent = t.subtitle;
+        /* ACTIVE LANGUAGE BUTTON */
 
-            const footer = document.getElementById("footer");
-            if (footer) {
-                footer.firstChild.textContent = t.footer;
-            }
-
-            document.querySelectorAll("[data-key]").forEach(element => {
-                const key = element.getAttribute("data-key");
-
-                if (t[key]) {
-                    element.textContent = t[key];
-                }
-            });
-
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-
-            // Save the detected language for the current device.
-            try {
-                localStorage.setItem("preferredLanguage", lang);
-            } catch (e) {}
-        }
-
-        // Apply language and update active button
         function setActiveLanguageButton(lang) {
-            document.querySelectorAll(".lang-btn").forEach(btn => {
-                btn.classList.toggle("active", btn.dataset.lang === lang);
-            });
+
+            document
+                .querySelectorAll(".lang-btn")
+                .forEach(btn => {
+
+                    btn.classList.toggle(
+                        "active",
+                        btn.dataset.lang === lang
+                    );
+
+                });
+
         }
 
-        function applyLanguage(lang = detectLanguage()) {
-            const t = translations[lang] || translations.en;
 
-            document.getElementById("title").textContent = t.title;
-            document.getElementById("location").textContent = t.location;
-            document.getElementById("subtitle").textContent = t.subtitle;
+        /* APPLY LANGUAGE */
 
-            const footer = document.getElementById("footer");
+        function applyLanguage(lang) {
+
+            const t =
+                translations[lang] ||
+                translations.en;
+
+            document
+                .getElementById("title")
+                .textContent = t.title;
+
+            document
+                .getElementById("location")
+                .textContent = t.location;
+
+            document
+                .getElementById("subtitle")
+                .textContent = t.subtitle;
+
+
+            const footer =
+                document.getElementById("footer");
+
             if (footer) {
-                const firstTextNode = Array.from(footer.childNodes)
-                    .find(node => node.nodeType === Node.TEXT_NODE);
-                if (firstTextNode) firstTextNode.textContent = t.footer;
+
+                const firstTextNode =
+                    Array.from(
+                        footer.childNodes
+                    ).find(
+                        node =>
+                            node.nodeType ===
+                            Node.TEXT_NODE
+                    );
+
+                if (firstTextNode) {
+
+                    firstTextNode.textContent =
+                        "\n            " +
+                        t.footer +
+                        "\n            ";
+
+                }
+
             }
 
-            document.querySelectorAll("[data-key]").forEach(element => {
-                const key = element.getAttribute("data-key");
-                if (t[key]) {
-                    element.textContent = t[key];
-                }
-            });
 
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+            document
+                .querySelectorAll("[data-key]")
+                .forEach(element => {
+
+                    const key =
+                        element.getAttribute(
+                            "data-key"
+                        );
+
+                    if (t[key]) {
+
+                        element.textContent =
+                            t[key];
+
+                    }
+
+                });
+
+
+            document.documentElement.lang =
+                lang;
+
+            document.documentElement.dir =
+                lang === "ar"
+                    ? "rtl"
+                    : "ltr";
+
 
             setActiveLanguageButton(lang);
 
+
             try {
-                localStorage.setItem("preferredLanguage", lang);
+
+                localStorage.setItem(
+                    "preferredLanguage",
+                    lang
+                );
+
             } catch (e) {}
+
         }
 
-        // Manual language buttons
-        document.querySelectorAll(".lang-btn").forEach(button => {
-            button.addEventListener("click", () => {
-                const lang = button.dataset.lang;
-                if (translations[lang]) {
-                    applyLanguage(lang);
-                }
-            });
-        });
 
-        // Automatically detect the mobile/browser language on first load.
+        /* MANUAL LANGUAGE BUTTONS */
+
+        document
+            .querySelectorAll(".lang-btn")
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        const lang =
+                            button.dataset.lang;
+
+                        if (
+                            translations[lang]
+                        ) {
+
+                            applyLanguage(lang);
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /* INITIAL LANGUAGE */
+
         let initialLanguage = null;
+
         try {
-            initialLanguage = localStorage.getItem("preferredLanguage");
+
+            initialLanguage =
+                localStorage.getItem(
+                    "preferredLanguage"
+                );
+
         } catch (e) {}
 
-        // Use saved language only if it exists; otherwise detect device/browser language.
+
         applyLanguage(
-            initialLanguage && translations[initialLanguage]
+
+            initialLanguage &&
+            translations[initialLanguage]
+
                 ? initialLanguage
+
                 : detectLanguage()
+
         );
 
-        // If the device language changes while the page is open, update it.
-        window.addEventListener("languagechange", () => {
-            let savedLanguage = null;
-            try {
-                savedLanguage = localStorage.getItem("preferredLanguage");
-            } catch (e) {}
 
-            if (!savedLanguage) {
-                applyLanguage(detectLanguage());
+        /* LANGUAGE CHANGE */
+
+        window.addEventListener(
+            "languagechange",
+            () => {
+
+                let savedLanguage = null;
+
+                try {
+
+                    savedLanguage =
+                        localStorage.getItem(
+                            "preferredLanguage"
+                        );
+
+                } catch (e) {}
+
+
+                if (!savedLanguage) {
+
+                    applyLanguage(
+                        detectLanguage()
+                    );
+
+                }
+
             }
-        });
+        );
+
     </script>
 
 </body>
 
 </html>
+
