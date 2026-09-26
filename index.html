@@ -8,22 +8,15 @@
 
 <title>YALLAH SPORT</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     margin:0;
@@ -32,13 +25,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 }
 
 :root{
-
     --white:#ffffff;
-
     --turquoise:#43e4d0;
-
     --blue:#38bdf8;
-
     --dark:#062c3d;
 }
 
@@ -47,52 +36,34 @@ html{
 }
 
 body{
-
     min-height:100vh;
-
     font-family:"Cairo",sans-serif;
-
     color:#fff;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     padding:30px 14px 45px;
-
     position:relative;
-
     overflow-x:hidden;
-
     background:#062c3d;
 }
 
 
-/* =====================================================
-   BACKGROUND
-===================================================== */
+/* ================= BACKGROUND ================= */
 
 body::before{
-
     content:"";
-
     position:fixed;
-
     inset:-6%;
 
     background:
-
         linear-gradient(
             180deg,
             rgba(0,35,55,.08),
             rgba(0,30,45,.35),
             rgba(0,15,25,.78)
         ),
-
         url("background.jpg")
-
         center center /
         cover
         no-repeat;
@@ -110,7 +81,6 @@ body::before{
 }
 
 @keyframes backgroundZoom{
-
     from{
         transform:scale(1);
     }
@@ -118,30 +88,22 @@ body::before{
     to{
         transform:scale(1.08);
     }
-
 }
 
 
-/* =====================================================
-   OVERLAY
-===================================================== */
+/* ================= OVERLAY ================= */
 
 body::after{
-
     content:"";
-
     position:fixed;
-
     inset:0;
 
     background:
-
         radial-gradient(
             circle at 50% 20%,
             rgba(67,228,208,.10),
             transparent 35%
         ),
-
         linear-gradient(
             180deg,
             rgba(0,25,40,.08),
@@ -149,25 +111,17 @@ body::after{
         );
 
     z-index:-2;
-
     pointer-events:none;
 }
 
 
-/* =====================================================
-   PAGE
-===================================================== */
+/* ================= PAGE ================= */
 
 .page{
-
     width:100%;
-
     max-width:470px;
-
     text-align:center;
-
     position:relative;
-
     z-index:5;
 
     animation:
@@ -177,43 +131,27 @@ body::after{
 }
 
 @keyframes pageAppear{
-
     from{
-
         opacity:0;
-
-        transform:
-            translateY(25px);
+        transform:translateY(25px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-            translateY(0);
+        transform:translateY(0);
     }
-
 }
 
 
-/* =====================================================
-   KITE ICON
-===================================================== */
+/* ================= KITE ICON ================= */
 
 .kite-icon{
-
     width:54px;
-
     height:54px;
-
-    margin:
-        0 auto 12px;
+    margin:0 auto 12px;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     border-radius:50%;
@@ -225,11 +163,8 @@ body::after{
         1px solid
         rgba(255,255,255,.30);
 
-    backdrop-filter:
-        blur(12px);
-
-    -webkit-backdrop-filter:
-        blur(12px);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     box-shadow:
         0 8px 25px
@@ -243,45 +178,32 @@ body::after{
 }
 
 .kite-icon i{
-
     font-size:22px;
-
     color:#fff;
 }
 
 @keyframes softFloat{
-
-    0%,
-    100%{
+    0%,100%{
         transform:translateY(0);
     }
 
     50%{
         transform:translateY(-6px);
     }
-
 }
 
 
-/* =====================================================
-   LOGO
-===================================================== */
+/* ================= LOGO ================= */
 
 .logo{
-
     width:155px;
-
     height:155px;
-
-    margin:
-        0 auto 18px;
+    margin:0 auto 18px;
 
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     background:
@@ -292,7 +214,6 @@ body::after{
         rgba(255,255,255,.96);
 
     box-shadow:
-
         0 15px 45px
         rgba(0,0,0,.30),
 
@@ -308,54 +229,36 @@ body::after{
 }
 
 .logo img{
-
     width:100%;
-
     height:100%;
-
     object-fit:contain;
-
     padding:5px;
-
     display:block;
 }
 
 @keyframes logoAppear{
-
     from{
-
         opacity:0;
-
-        transform:
-            scale(.75);
+        transform:scale(.75);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-            scale(1);
+        transform:scale(1);
     }
-
 }
 
 
-/* =====================================================
-   TITLE
-===================================================== */
+/* ================= TITLE ================= */
 
 .title{
-
     font-family:
         "Montserrat",
         "Cairo",
         sans-serif;
 
     font-size:30px;
-
     font-weight:800;
-
     letter-spacing:2px;
 
     margin-bottom:4px;
@@ -366,18 +269,12 @@ body::after{
 }
 
 
-/* =====================================================
-   LOCATION
-===================================================== */
+/* ================= LOCATION ================= */
 
 .location{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:7px;
 
     font-size:13px;
@@ -389,18 +286,13 @@ body::after{
 }
 
 .location i{
-
-    color:
-        var(--turquoise);
+    color:var(--turquoise);
 }
 
 
-/* =====================================================
-   SUBTITLE
-===================================================== */
+/* ================= SUBTITLE ================= */
 
 .subtitle{
-
     font-size:12px;
 
     color:
@@ -410,40 +302,28 @@ body::after{
 }
 
 
-/* =====================================================
-   LANGUAGE SWITCHER
-===================================================== */
+/* ================= LANGUAGES ================= */
 
 .language-switcher{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     flex-wrap:wrap;
 
     gap:7px;
-
     margin-bottom:18px;
 
     direction:ltr;
 }
 
 .lang-btn{
-
     min-width:72px;
-
     height:36px;
 
-    padding:
-        5px 9px;
+    padding:5px 9px;
 
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
 
     gap:5px;
@@ -464,23 +344,18 @@ body::after{
         sans-serif;
 
     font-size:11px;
-
     font-weight:600;
 
     cursor:pointer;
 
-    backdrop-filter:
-        blur(12px);
-
-    -webkit-backdrop-filter:
-        blur(12px);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     transition:.25s ease;
 }
 
 .lang-btn:hover,
 .lang-btn.active{
-
     background:
         rgba(255,255,255,.22);
 
@@ -496,45 +371,33 @@ body::after{
 }
 
 .lang-btn .flag{
-
     font-size:16px;
 }
 
 
-/* =====================================================
-   LINKS
-===================================================== */
+/* ================= LINKS ================= */
 
 .links{
-
     display:flex;
-
     flex-direction:column;
-
     gap:10px;
 }
 
 .link{
-
     min-height:57px;
 
     position:relative;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    padding:
-        12px 55px;
+    padding:12px 55px;
 
     color:#fff;
-
     text-decoration:none;
 
     font-size:14px;
-
     font-weight:600;
 
     border-radius:16px;
@@ -546,42 +409,28 @@ body::after{
         1px solid
         rgba(255,255,255,.22);
 
-    backdrop-filter:
-        blur(14px);
-
-    -webkit-backdrop-filter:
-        blur(14px);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
 
     box-shadow:
         0 7px 25px
         rgba(0,0,0,.16);
 
     transition:
-
         transform .3s ease,
-
         background .3s ease,
-
         border-color .3s ease,
-
         box-shadow .3s ease;
 
     overflow:hidden;
 }
 
-
-/* SHINE */
-
 .link::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -589,38 +438,25 @@ body::after{
             transparent
         );
 
-    transform:
-        translateX(-100%);
-
-    transition:
-        transform .6s ease;
+    transform:translateX(-100%);
+    transition:transform .6s ease;
 }
 
 .link:hover::before{
-
-    transform:
-        translateX(100%);
+    transform:translateX(100%);
 }
 
-
-/* SIDE LINE */
-
 .link::after{
-
     content:"";
-
     position:absolute;
 
     top:0;
-
     left:0;
 
     width:3px;
-
     height:100%;
 
     background:
-
         linear-gradient(
             180deg,
             var(--turquoise),
@@ -628,14 +464,11 @@ body::after{
         );
 
     opacity:0;
-
     transition:.3s;
 }
 
 .link:hover{
-
-    transform:
-        translateY(-3px);
+    transform:translateY(-3px);
 
     background:
         rgba(255,255,255,.18);
@@ -649,23 +482,17 @@ body::after{
 }
 
 .link:hover::after{
-
     opacity:1;
 }
 
 .link:active{
-
-    transform:
-        scale(.98);
+    transform:scale(.98);
 }
 
 
-/* =====================================================
-   ICONS
-===================================================== */
+/* ================= ICONS ================= */
 
 .main-icon{
-
     position:absolute;
 
     right:20px;
@@ -678,7 +505,6 @@ body::after{
 }
 
 .arrow{
-
     position:absolute;
 
     left:20px;
@@ -691,42 +517,29 @@ body::after{
 }
 
 .link:hover .arrow{
-
-    transform:
-        translateX(-4px);
-
+    transform:translateX(-4px);
     opacity:.95;
 }
 
 
-/* =====================================================
-   LTR
-===================================================== */
+/* ================= LTR ================= */
 
 html[dir="ltr"] .main-icon{
-
     right:auto;
-
     left:20px;
 }
 
 html[dir="ltr"] .arrow{
-
     left:auto;
-
     right:20px;
 }
 
 html[dir="ltr"] .link:hover .arrow{
-
-    transform:
-        translateX(4px);
+    transform:translateX(4px);
 }
 
 
-/* =====================================================
-   ICON COLORS
-===================================================== */
+/* ================= ICON COLORS ================= */
 
 .facebook .main-icon{
     color:#1877f2;
@@ -761,16 +574,12 @@ html[dir="ltr"] .link:hover .arrow{
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* ================= FOOTER ================= */
 
 .footer{
-
     margin-top:22px;
 
     font-size:10px;
-
     line-height:1.8;
 
     color:
@@ -778,7 +587,6 @@ html[dir="ltr"] .link:hover .arrow{
 }
 
 .footer a{
-
     color:
         rgba(255,255,255,.72);
 
@@ -788,28 +596,21 @@ html[dir="ltr"] .link:hover .arrow{
 }
 
 .footer a:hover{
-
     color:#fff;
 }
 
 
-/* =====================================================
-   BOTTOM LINE
-===================================================== */
+/* ================= BOTTOM LINE ================= */
 
 .bottom-line{
-
     width:50px;
-
     height:2px;
 
-    margin:
-        12px auto 0;
+    margin:12px auto 0;
 
     border-radius:10px;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -821,14 +622,11 @@ html[dir="ltr"] .link:hover .arrow{
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* ================= MOBILE ================= */
 
 @media(max-width:500px){
 
     body{
-
         padding:
             17px
             11px
@@ -836,129 +634,94 @@ html[dir="ltr"] .link:hover .arrow{
     }
 
     .page{
-
         max-width:420px;
     }
 
     .logo{
-
         width:130px;
-
         height:130px;
-
         margin-bottom:15px;
     }
 
     .title{
-
         font-size:25px;
     }
 
     .location{
-
         font-size:12px;
     }
 
     .subtitle{
-
         font-size:11px;
-
         margin-bottom:18px;
     }
 
     .language-switcher{
-
         gap:6px;
     }
 
     .lang-btn{
-
         min-width:69px;
-
         height:35px;
-
         font-size:10px;
     }
 
     .link{
-
         min-height:55px;
-
         border-radius:14px;
-
         font-size:13px;
     }
 
     .main-icon{
-
         right:17px;
     }
 
     .arrow{
-
         left:17px;
     }
 
     html[dir="ltr"] .main-icon{
-
         right:auto;
-
         left:17px;
     }
 
     html[dir="ltr"] .arrow{
-
         left:auto;
-
         right:17px;
     }
-
 }
 
 
-/* =====================================================
-   SMALL DEVICES
-===================================================== */
+/* ================= SMALL DEVICES ================= */
 
 @media(max-width:360px){
 
     body{
-
         padding-top:10px;
     }
 
     .kite-icon{
-
         width:46px;
-
         height:46px;
     }
 
     .logo{
-
         width:108px;
-
         height:108px;
     }
 
     .title{
-
         font-size:21px;
     }
 
     .link{
-
         min-height:51px;
-
         font-size:12px;
     }
-
 }
 
 
-/* =====================================================
-   REDUCE MOTION
-===================================================== */
+/* ================= REDUCE MOTION ================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -975,7 +738,6 @@ html[dir="ltr"] .link:hover .arrow{
         scroll-behavior:
             auto !important;
     }
-
 }
 
 </style>
@@ -984,16 +746,13 @@ html[dir="ltr"] .link:hover .arrow{
 
 <body>
 
-
 <main class="page">
 
 
     <!-- KITE ICON -->
 
     <div class="kite-icon">
-
         <i class="fa-solid fa-parachute-box"></i>
-
     </div>
 
 
@@ -1026,9 +785,7 @@ html[dir="ltr"] .link:hover .arrow{
         <i class="fa-solid fa-location-dot"></i>
 
         <span id="location">
-
             الغردقة، البحر الأحمر
-
         </span>
 
     </div>
@@ -1051,14 +808,12 @@ html[dir="ltr"] .link:hover .arrow{
         class="language-switcher"
         aria-label="Language selector">
 
-
         <button
             class="lang-btn"
             type="button"
             data-lang="ar">
 
             <span class="flag">🇪🇬</span>
-
             العربية
 
         </button>
@@ -1070,7 +825,6 @@ html[dir="ltr"] .link:hover .arrow{
             data-lang="en">
 
             <span class="flag">🇬🇧</span>
-
             English
 
         </button>
@@ -1082,7 +836,6 @@ html[dir="ltr"] .link:hover .arrow{
             data-lang="de">
 
             <span class="flag">🇩🇪</span>
-
             Deutsch
 
         </button>
@@ -1094,7 +847,6 @@ html[dir="ltr"] .link:hover .arrow{
             data-lang="fr">
 
             <span class="flag">🇫🇷</span>
-
             Français
 
         </button>
@@ -1106,11 +858,9 @@ html[dir="ltr"] .link:hover .arrow{
             data-lang="sl">
 
             <span class="flag">🇸🇮</span>
-
             Slovenščina
 
         </button>
-
 
     </div>
 
@@ -1124,32 +874,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link review"
-
             href="https://g.page/r/CT31bzP2wVE5EAg/review"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
-
-            <i
-                class="fa-solid fa-star main-icon">
-            </i>
-
+            <i class="fa-solid fa-star main-icon"></i>
 
             <span data-key="review">
-
                 قيّمنا على Google
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1158,32 +895,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link facebook"
-
             href="https://www.facebook.com/share/1NfqqtnhaP/?mibextid=wwXIfr"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
-
-            <i
-                class="fa-brands fa-facebook-f main-icon">
-            </i>
-
+            <i class="fa-brands fa-facebook-f main-icon"></i>
 
             <span data-key="facebook">
-
                 فيسبوك
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1192,32 +916,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link instagram"
-
             href="https://www.instagram.com/yallah_sport/?__pwa=1"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
-
-            <i
-                class="fa-brands fa-instagram main-icon">
-            </i>
-
+            <i class="fa-brands fa-instagram main-icon"></i>
 
             <span data-key="instagram">
-
                 إنستجرام
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1226,32 +937,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link youtube"
-
             href="https://youtube.com/@yallahsportkitesafariegypt5395?si=5M7XmbE5Xms5P9Wy"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
-
-            <i
-                class="fa-brands fa-youtube main-icon">
-            </i>
-
+            <i class="fa-brands fa-youtube main-icon"></i>
 
             <span data-key="youtube">
-
                 يوتيوب
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1260,32 +958,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link website"
-
             href="https://yallah-sport.com/"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
-
-            <i
-                class="fa-solid fa-globe main-icon">
-            </i>
-
+            <i class="fa-solid fa-globe main-icon"></i>
 
             <span data-key="website">
-
                 الموقع الإلكتروني
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1294,32 +979,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link whatsapp"
-
             href="https://wa.me/201004016111"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
-
-            <i
-                class="fa-brands fa-whatsapp main-icon">
-            </i>
-
+            <i class="fa-brands fa-whatsapp main-icon"></i>
 
             <span data-key="whatsapp">
-
                 واتساب
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1328,28 +1000,17 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link phone"
-
             href="tel:+38669970563">
 
-
-            <i
-                class="fa-solid fa-phone main-icon">
-            </i>
-
+            <i class="fa-solid fa-phone main-icon"></i>
 
             <span data-key="phone">
-
                 اتصل بنا
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1358,30 +1019,17 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link email"
+            href="mailto:info@yallah-sport.com?subject=YALLAH%20SPORT">
 
-            href="#"
-
-            onclick="openEmail('info@yallah-sport.com'); return false;">
-
-
-            <i
-                class="fa-solid fa-envelope main-icon">
-            </i>
-
+            <i class="fa-solid fa-envelope main-icon"></i>
 
             <span data-key="info">
-
                 Info
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
-
 
         </a>
 
@@ -1390,33 +1038,19 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             class="link email"
+            href="mailto:mosty.hurghada@gmail.com?subject=YALLAH%20SPORT">
 
-            href="#"
-
-            onclick="openEmail('mosty.hurghada@gmail.com'); return false;">
-
-
-            <i
-                class="fa-solid fa-envelope main-icon">
-            </i>
-
+            <i class="fa-solid fa-envelope main-icon"></i>
 
             <span data-key="privateEmail">
-
                 Private Email
-
             </span>
-
 
             <span class="arrow">
-
                 <i class="fa-solid fa-arrow-left"></i>
-
             </span>
 
-
         </a>
-
 
     </div>
 
@@ -1433,9 +1067,7 @@ html[dir="ltr"] .link:hover .arrow{
 
         <a
             href="https://link.gettap.co/mnswrkhlyfh8103175"
-
             target="_blank"
-
             rel="noopener noreferrer">
 
             Get in touch with us
@@ -1447,370 +1079,232 @@ html[dir="ltr"] .link:hover .arrow{
 
     <div class="bottom-line"></div>
 
-
 </main>
 
 
 <script>
 
-
-/* =====================================================
-   TRANSLATIONS
-===================================================== */
+/* ================= TRANSLATIONS ================= */
 
 const translations = {
 
-
     ar:{
-
         title:"YALLAH SPORT",
-
-        location:
-            "الغردقة، البحر الأحمر",
-
-        subtitle:
-            "كل ما تحتاجه لعالم الـ Kite Surf",
+        location:"الغردقة، البحر الأحمر",
+        subtitle:"كل ما تحتاجه لعالم الـ Kite Surf",
 
         facebook:"فيسبوك",
-
         instagram:"إنستجرام",
-
         youtube:"يوتيوب",
-
         website:"الموقع الإلكتروني",
-
         whatsapp:"واتساب",
-
         phone:"اتصل بنا",
-
         info:"Info",
+        privateEmail:"البريد الخاص",
+        review:"قيّمنا على Google",
 
-        privateEmail:
-            "البريد الخاص",
-
-        review:
-            "قيّمنا على Google",
-
-        footer:
-            "Des. by: Mansour khalifa"
-
+        footer:"Des. by: Mansour khalifa"
     },
 
 
     en:{
-
         title:"YALLAH SPORT",
-
-        location:
-            "Hurghada, Red Sea",
-
-        subtitle:
-            "Everything You Need for Kite Surf",
+        location:"Hurghada, Red Sea",
+        subtitle:"Everything You Need for Kite Surf",
 
         facebook:"Facebook",
-
         instagram:"Instagram",
-
         youtube:"YouTube",
-
         website:"Official Website",
-
         whatsapp:"WhatsApp",
-
         phone:"Call Us",
-
         info:"Info",
+        privateEmail:"Private Email",
+        review:"Review Us on Google",
 
-        privateEmail:
-            "Private Email",
-
-        review:
-            "Review Us on Google",
-
-        footer:
-            "Des. by: Mansour khalifa"
-
+        footer:"Des. by: Mansour khalifa"
     },
 
 
     de:{
-
         title:"YALLAH SPORT",
-
-        location:
-            "Hurghada, Rotes Meer",
-
-        subtitle:
-            "Alles für deine Kite-Surf Experience",
+        location:"Hurghada, Rotes Meer",
+        subtitle:"Alles für deine Kite-Surf Experience",
 
         facebook:"Facebook",
-
         instagram:"Instagram",
-
         youtube:"YouTube",
-
         website:"Offizielle Website",
-
         whatsapp:"WhatsApp",
-
         phone:"Anrufen",
-
         info:"Info",
+        privateEmail:"Private E-Mail",
+        review:"Auf Google bewerten",
 
-        privateEmail:
-            "Private E-Mail",
-
-        review:
-            "Auf Google bewerten",
-
-        footer:
-            "Des. by: Mansour khalifa"
-
+        footer:"Des. by: Mansour khalifa"
     },
 
 
     fr:{
-
         title:"YALLAH SPORT",
-
-        location:
-            "Hurghada, Mer Rouge",
-
-        subtitle:
-            "Tout ce dont vous avez besoin pour le Kite Surf",
+        location:"Hurghada, Mer Rouge",
+        subtitle:"Tout ce dont vous avez besoin pour le Kite Surf",
 
         facebook:"Facebook",
-
         instagram:"Instagram",
-
         youtube:"YouTube",
-
         website:"Site officiel",
-
         whatsapp:"WhatsApp",
-
         phone:"Appelez-nous",
-
         info:"Info",
+        privateEmail:"E-mail privé",
+        review:"Nous évaluer sur Google",
 
-        privateEmail:
-            "E-mail privé",
-
-        review:
-            "Nous évaluer sur Google",
-
-        footer:
-            "Des. by: Mansour khalifa"
-
+        footer:"Des. by: Mansour khalifa"
     },
 
 
     sl:{
-
         title:"YALLAH SPORT",
-
-        location:
-            "Hurgada, Rdeče morje",
-
-        subtitle:
-            "Vse, kar potrebujete za kajtanje",
+        location:"Hurgada, Rdeče morje",
+        subtitle:"Vse, kar potrebujete za kajtanje",
 
         facebook:"Facebook",
-
         instagram:"Instagram",
-
         youtube:"YouTube",
-
         website:"Uradna spletna stran",
-
         whatsapp:"WhatsApp",
-
         phone:"Pokličite nas",
-
         info:"Info",
+        privateEmail:"Zasebni e-poštni naslov",
+        review:"Ocenite nas na Googlu",
 
-        privateEmail:
-            "Zasebni e-poštni naslov",
-
-        review:
-            "Ocenite nas na Googlu",
-
-        footer:
-            "Des. by: Mansour khalifa"
-
+        footer:"Des. by: Mansour khalifa"
     }
 
 };
 
 
-/* =====================================================
-   LANGUAGE DETECTION
-===================================================== */
+/* ================= DETECT LANGUAGE ================= */
 
 function detectLanguage(){
 
-    const languages=[
-
+    const languages = [
         ...(navigator.languages || []),
-
         navigator.language || "en"
-
     ];
 
+    for(const browserLang of languages){
 
-    for(
-        const browserLang
-        of languages
-    ){
-
-        const lang=
+        const lang =
             browserLang.toLowerCase();
 
-
-        if(
-            lang.startsWith("ar")
-        )
+        if(lang.startsWith("ar"))
             return "ar";
 
-
-        if(
-            lang.startsWith("fr")
-        )
+        if(lang.startsWith("fr"))
             return "fr";
 
-
-        if(
-            lang.startsWith("sl")
-        )
+        if(lang.startsWith("sl"))
             return "sl";
 
-
-        if(
-            lang.startsWith("de")
-        )
+        if(lang.startsWith("de"))
             return "de";
 
-
-        if(
-            lang.startsWith("en")
-        )
+        if(lang.startsWith("en"))
             return "en";
-
     }
-
 
     return "en";
 }
 
 
-/* =====================================================
-   ACTIVE LANGUAGE
-===================================================== */
+/* ================= ACTIVE BUTTON ================= */
 
 function setActiveLanguageButton(lang){
 
     document
         .querySelectorAll(".lang-btn")
-        .forEach(btn=>{
+        .forEach(btn => {
 
             btn.classList.toggle(
-
                 "active",
-
-                btn.dataset.lang===lang
-
+                btn.dataset.lang === lang
             );
 
         });
-
 }
 
 
-/* =====================================================
-   APPLY LANGUAGE
-===================================================== */
+/* ================= APPLY LANGUAGE ================= */
 
 function applyLanguage(lang){
 
-    const t=
-        translations[lang]
-        ||
+    const t =
+        translations[lang] ||
         translations.en;
 
 
     document
         .getElementById("title")
-        .textContent=
-        t.title;
+        .textContent = t.title;
 
 
     document
         .getElementById("location")
-        .textContent=
-        t.location;
+        .textContent = t.location;
 
 
     document
         .getElementById("subtitle")
-        .textContent=
-        t.subtitle;
+        .textContent = t.subtitle;
 
 
     document
         .querySelectorAll("[data-key]")
-        .forEach(element=>{
+        .forEach(element => {
 
-            const key=
+            const key =
                 element.dataset.key;
 
-
             if(t[key]){
-
-                element.textContent=
-                    t[key];
-
+                element.textContent = t[key];
             }
 
         });
 
 
-    const footer=
+    const footer =
         document.getElementById("footer");
 
 
     if(footer){
 
-        const textNode=
+        const textNode =
             Array.from(
                 footer.childNodes
-            )
-            .find(
-                node=>
-                    node.nodeType===
+            ).find(
+                node =>
+                    node.nodeType ===
                     Node.TEXT_NODE
             );
 
-
         if(textNode){
 
-            textNode.textContent=
-                "\n        "
-                +
-                t.footer
-                +
+            textNode.textContent =
+                "\n        " +
+                t.footer +
                 "\n        ";
-
         }
-
     }
 
 
-    document.documentElement.lang=
+    document.documentElement.lang =
         lang;
 
 
-    document.documentElement.dir=
-        lang==="ar"
+    document.documentElement.dir =
+        lang === "ar"
             ? "rtl"
             : "ltr";
 
@@ -1826,34 +1320,24 @@ function applyLanguage(lang){
         );
 
     }catch(e){}
-
 }
 
 
-/* =====================================================
-   LANGUAGE BUTTONS
-===================================================== */
+/* ================= LANGUAGE BUTTONS ================= */
 
 document
     .querySelectorAll(".lang-btn")
-    .forEach(button=>{
+    .forEach(button => {
 
         button.addEventListener(
             "click",
-            ()=>{
+            () => {
 
-                const lang=
+                const lang =
                     button.dataset.lang;
 
-
-                if(
-                    translations[lang]
-                ){
-
-                    applyLanguage(
-                        lang
-                    );
-
+                if(translations[lang]){
+                    applyLanguage(lang);
                 }
 
             }
@@ -1862,16 +1346,13 @@ document
     });
 
 
-/* =====================================================
-   INITIAL LANGUAGE
-===================================================== */
+/* ================= INITIAL LANGUAGE ================= */
 
-let initialLanguage=null;
-
+let initialLanguage = null;
 
 try{
 
-    initialLanguage=
+    initialLanguage =
         localStorage.getItem(
             "preferredLanguage"
         );
@@ -1881,8 +1362,7 @@ try{
 
 applyLanguage(
 
-    initialLanguage
-    &&
+    initialLanguage &&
     translations[initialLanguage]
 
         ? initialLanguage
@@ -1892,20 +1372,17 @@ applyLanguage(
 );
 
 
-/* =====================================================
-   LANGUAGE CHANGE
-===================================================== */
+/* ================= LANGUAGE CHANGE ================= */
 
 window.addEventListener(
     "languagechange",
-    ()=>{
+    () => {
 
-        let savedLanguage=null;
-
+        let savedLanguage = null;
 
         try{
 
-            savedLanguage=
+            savedLanguage =
                 localStorage.getItem(
                     "preferredLanguage"
                 );
@@ -1924,104 +1401,7 @@ window.addEventListener(
     }
 );
 
-
-/* =====================================================
-   EMAIL SYSTEM
-===================================================== */
-
-function openEmail(email){
-
-    /*
-     * ===============================
-     * MOBILE
-     * ===============================
-     */
-
-    if(window.innerWidth <= 768){
-
-        const mailto=
-            "mailto:"
-            +
-            email
-            +
-            "?subject="
-            +
-            encodeURIComponent(
-                "YALLAH SPORT"
-            );
-
-
-        /*
-         * فتح تطبيق البريد
-         */
-
-        window.location.href=
-            mailto;
-
-
-        /*
-         * Fallback إلى Gmail
-         */
-
-        setTimeout(
-            function(){
-
-                window.location.href=
-                    "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to="
-                    +
-                    encodeURIComponent(email)
-                    +
-                    "&su="
-                    +
-                    encodeURIComponent(
-                        "YALLAH SPORT"
-                    );
-
-            },
-            1500
-        );
-
-
-        return;
-
-    }
-
-
-    /*
-     * ===============================
-     * DESKTOP
-     * ===============================
-     */
-
-
-    const gmailURL=
-
-        "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to="
-        +
-        encodeURIComponent(email)
-        +
-        "&su="
-        +
-        encodeURIComponent(
-            "YALLAH SPORT"
-        );
-
-
-    /*
-     * فتح Gmail Compose
-     */
-
-    window.open(
-        gmailURL,
-        "_blank",
-        "noopener,noreferrer"
-    );
-
-}
-
 </script>
 
 </body>
-
 </html>
-
