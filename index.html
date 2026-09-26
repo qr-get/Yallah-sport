@@ -55,7 +55,9 @@
             background: #062c3d;
         }
 
-        /* BACKGROUND */
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
 
         body::before {
             content: "";
@@ -86,6 +88,7 @@
         }
 
         @keyframes backgroundZoom {
+
             0% {
                 transform: scale(1);
             }
@@ -95,7 +98,9 @@
             }
         }
 
-        /* OVERLAY */
+        /* =====================================================
+           OVERLAY
+        ===================================================== */
 
         body::after {
             content: "";
@@ -116,7 +121,9 @@
             pointer-events: none;
         }
 
-        /* PAGE */
+        /* =====================================================
+           PAGE
+        ===================================================== */
 
         .page {
             width: 100%;
@@ -131,6 +138,7 @@
         }
 
         @keyframes pageAppear {
+
             from {
                 opacity: 0;
                 transform: translateY(25px);
@@ -142,9 +150,12 @@
             }
         }
 
-        /* ICON */
+        /* =====================================================
+           KITE ICON
+        ===================================================== */
 
         .kite-icon {
+
             width: 55px;
             height: 55px;
 
@@ -172,12 +183,16 @@
         }
 
         .kite-icon i {
+
             font-size: 22px;
+
             color: white;
+
             opacity: 0.95;
         }
 
         @keyframes softFloat {
+
             0%,
             100% {
                 transform: translateY(0);
@@ -188,9 +203,12 @@
             }
         }
 
-        /* LOGO */
+        /* =====================================================
+           LOGO
+        ===================================================== */
 
         .logo {
+
             width: 150px;
             height: 150px;
 
@@ -215,6 +233,7 @@
         }
 
         .logo img {
+
             width: 100%;
             height: 100%;
 
@@ -225,9 +244,12 @@
             display: block;
         }
 
-        /* TITLE */
+        /* =====================================================
+           TITLE
+        ===================================================== */
 
         .title {
+
             font-family:
                 "Montserrat",
                 "Cairo",
@@ -246,9 +268,12 @@
             margin-bottom: 4px;
         }
 
-        /* LOCATION */
+        /* =====================================================
+           LOCATION
+        ===================================================== */
 
         .location {
+
             display: flex;
 
             justify-content: center;
@@ -265,15 +290,19 @@
         }
 
         .location i {
+
             color:
                 var(--turquoise);
 
             font-size: 13px;
         }
 
-        /* SUBTITLE */
+        /* =====================================================
+           SUBTITLE
+        ===================================================== */
 
         .subtitle {
+
             font-size: 12px;
 
             font-weight: 400;
@@ -284,22 +313,33 @@
             margin-bottom: 24px;
         }
 
-        /* LANGUAGE SWITCHER */
+        /* =====================================================
+           LANGUAGE SWITCHER
+        ===================================================== */
 
         .language-switcher {
+
             display: flex;
+
             justify-content: center;
             align-items: center;
+
             flex-wrap: wrap;
+
             gap: 8px;
+
             margin: 0 0 18px;
+
             direction: ltr;
         }
 
         .lang-btn {
+
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             gap: 6px;
 
             min-width: 76px;
@@ -322,6 +362,7 @@
                 sans-serif;
 
             font-size: 12px;
+
             font-weight: 600;
 
             cursor: pointer;
@@ -338,6 +379,7 @@
 
         .lang-btn:hover,
         .lang-btn.active {
+
             background:
                 rgba(255,255,255,.22);
 
@@ -349,19 +391,27 @@
         }
 
         .lang-btn .flag {
+
             font-size: 17px;
+
             line-height: 1;
         }
 
-        /* LINKS */
+        /* =====================================================
+           LINKS
+        ===================================================== */
 
         .links {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 10px;
         }
 
         .link {
+
             min-height: 57px;
 
             position: relative;
@@ -407,6 +457,7 @@
         }
 
         .link::after {
+
             content: "";
 
             position: absolute;
@@ -431,6 +482,7 @@
         }
 
         .link:hover {
+
             transform:
                 translateY(-3px);
 
@@ -450,13 +502,15 @@
         }
 
         .link:active {
-            transform:
-                scale(0.98);
+            transform: scale(0.98);
         }
 
-        /* MAIN ICON */
+        /* =====================================================
+           MAIN ICON
+        ===================================================== */
 
         .main-icon {
+
             position: absolute;
 
             right: 20px;
@@ -468,9 +522,12 @@
             text-align: center;
         }
 
-        /* ARROW */
+        /* =====================================================
+           ARROW
+        ===================================================== */
 
         .arrow {
+
             position: absolute;
 
             left: 20px;
@@ -485,30 +542,38 @@
         }
 
         .link:hover .arrow {
+
             transform:
                 translateX(-4px);
 
             opacity: 0.9;
         }
 
-        /* LTR */
+        /* =====================================================
+           LTR
+        ===================================================== */
 
         html[dir="ltr"] .main-icon {
+
             right: auto;
             left: 20px;
         }
 
         html[dir="ltr"] .arrow {
+
             left: auto;
             right: 20px;
         }
 
         html[dir="ltr"] .link:hover .arrow {
+
             transform:
                 translateX(4px);
         }
 
-        /* ICON COLORS */
+        /* =====================================================
+           ICON COLORS
+        ===================================================== */
 
         .facebook .main-icon {
             color: #1877f2;
@@ -542,9 +607,12 @@
             color: #ffd700;
         }
 
-        /* FOOTER */
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
         .footer {
+
             margin-top: 22px;
 
             font-size: 10px;
@@ -554,6 +622,7 @@
         }
 
         .footer a {
+
             color:
                 rgba(255,255,255,0.65);
 
@@ -564,9 +633,12 @@
             color: white;
         }
 
-        /* BOTTOM LINE */
+        /* =====================================================
+           BOTTOM LINE
+        ===================================================== */
 
         .bottom-line {
+
             width: 45px;
             height: 2px;
 
@@ -585,11 +657,14 @@
             opacity: 0.75;
         }
 
-        /* MOBILE */
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
         @media (max-width: 500px) {
 
             body {
+
                 padding:
                     18px
                     12px
@@ -601,6 +676,7 @@
             }
 
             .logo {
+
                 width: 125px;
                 height: 125px;
 
@@ -616,11 +692,14 @@
             }
 
             .subtitle {
+
                 font-size: 11px;
+
                 margin-bottom: 20px;
             }
 
             .link {
+
                 min-height: 55px;
 
                 border-radius: 14px;
@@ -637,17 +716,23 @@
             }
 
             html[dir="ltr"] .main-icon {
+
                 right: auto;
+
                 left: 17px;
             }
 
             html[dir="ltr"] .arrow {
+
                 left: auto;
+
                 right: 17px;
             }
         }
 
-        /* SMALL DEVICES */
+        /* =====================================================
+           SMALL DEVICES
+        ===================================================== */
 
         @media (max-width: 360px) {
 
@@ -656,11 +741,13 @@
             }
 
             .kite-icon {
+
                 width: 48px;
                 height: 48px;
             }
 
             .logo {
+
                 width: 110px;
                 height: 110px;
             }
@@ -670,12 +757,16 @@
             }
 
             .link {
+
                 min-height: 52px;
+
                 font-size: 12px;
             }
         }
 
-        /* REDUCE MOTION */
+        /* =====================================================
+           REDUCE MOTION
+        ===================================================== */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -704,21 +795,29 @@
         <!-- KITE ICON -->
 
         <div class="kite-icon">
+
             <i class="fa-solid fa-parachute-box"></i>
+
         </div>
 
         <!-- LOGO -->
 
         <div class="logo">
+
             <img
                 src="logo.png"
                 alt="Yallah Sport">
+
         </div>
 
         <!-- TITLE -->
 
-        <h1 class="title" id="title">
+        <h1
+            class="title"
+            id="title">
+
             YALLAH SPORT
+
         </h1>
 
         <!-- LOCATION -->
@@ -728,15 +827,21 @@
             <i class="fa-solid fa-location-dot"></i>
 
             <span id="location">
+
                 الغردقة، البحر الأحمر
+
             </span>
 
         </div>
 
         <!-- SUBTITLE -->
 
-        <p class="subtitle" id="subtitle">
+        <p
+            class="subtitle"
+            id="subtitle">
+
             كل ما تحتاجه لعالم الـ Kite Surf
+
         </p>
 
         <!-- LANGUAGE SWITCHER -->
@@ -751,6 +856,7 @@
                 data-lang="ar">
 
                 <span class="flag">🇪🇬</span>
+
                 العربية
 
             </button>
@@ -761,6 +867,7 @@
                 data-lang="en">
 
                 <span class="flag">🇬🇧</span>
+
                 English
 
             </button>
@@ -771,6 +878,7 @@
                 data-lang="de">
 
                 <span class="flag">🇩🇪</span>
+
                 Deutsch
 
             </button>
@@ -781,6 +889,7 @@
                 data-lang="fr">
 
                 <span class="flag">🇫🇷</span>
+
                 Français
 
             </button>
@@ -791,6 +900,7 @@
                 data-lang="sl">
 
                 <span class="flag">🇸🇮</span>
+
                 Slovenščina
 
             </button>
@@ -939,11 +1049,11 @@
 
             </a>
 
-            <!-- INFO EMAIL - GMAIL -->
+            <!-- INFO EMAIL - GMAIL WEB -->
 
             <a
                 class="link email"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@yallah-sport.com"
+                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=info%40yallah-sport.com"
                 target="_blank"
                 rel="noopener noreferrer">
 
@@ -959,11 +1069,11 @@
 
             </a>
 
-            <!-- PRIVATE EMAIL - GMAIL -->
+            <!-- PRIVATE EMAIL - GMAIL WEB -->
 
             <a
                 class="link email"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mosty.hurghada@gmail.com"
+                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=mosty.hurghada%40gmail.com"
                 target="_blank"
                 rel="noopener noreferrer">
 
@@ -983,7 +1093,9 @@
 
         <!-- FOOTER -->
 
-        <div class="footer" id="footer">
+        <div
+            class="footer"
+            id="footer">
 
             Des. by: Mansour khalifa
 
@@ -1004,7 +1116,9 @@
 
     </main>
 
-    <!-- AUTO LANGUAGE SCRIPT -->
+    <!-- =====================================================
+         LANGUAGE SCRIPT
+    ===================================================== -->
 
     <script>
 
@@ -1014,15 +1128,19 @@
                 title: "YALLAH SPORT",
                 location: "الغردقة، البحر الأحمر",
                 subtitle: "كل ما تحتاجه لعالم الـ Kite Surf",
+
                 facebook: "فيسبوك",
                 instagram: "إنستجرام",
                 youtube: "يوتيوب",
                 website: "الموقع الإلكتروني",
                 whatsapp: "واتساب",
                 phone: "اتصل بنا",
+
                 info: "Info",
                 privateEmail: "البريد الخاص",
+
                 review: "قيّمنا على Google",
+
                 footer: "Des. by: Mansour khalifa"
             },
 
@@ -1030,15 +1148,19 @@
                 title: "YALLAH SPORT",
                 location: "Hurghada, Red Sea",
                 subtitle: "Everything You Need for Kite Surf",
+
                 facebook: "Facebook",
                 instagram: "Instagram",
                 youtube: "YouTube",
                 website: "Official Website",
                 whatsapp: "WhatsApp",
                 phone: "Call Us",
+
                 info: "Info",
                 privateEmail: "Private Email",
+
                 review: "Review Us on Google",
+
                 footer: "Des. by: Mansour khalifa"
             },
 
@@ -1046,15 +1168,19 @@
                 title: "YALLAH SPORT",
                 location: "Hurghada, Rotes Meer",
                 subtitle: "Alles für deine Kite-Surf Experience",
+
                 facebook: "Facebook",
                 instagram: "Instagram",
                 youtube: "YouTube",
                 website: "Offizielle Website",
                 whatsapp: "WhatsApp",
                 phone: "Anrufen",
+
                 info: "Info",
                 privateEmail: "Private E-Mail",
+
                 review: "Auf Google bewerten",
+
                 footer: "Des. by: Mansour khalifa"
             },
 
@@ -1062,15 +1188,19 @@
                 title: "YALLAH SPORT",
                 location: "Hurghada, Mer Rouge",
                 subtitle: "Tout ce dont vous avez besoin pour le Kite Surf",
+
                 facebook: "Facebook",
                 instagram: "Instagram",
                 youtube: "YouTube",
                 website: "Site officiel",
                 whatsapp: "WhatsApp",
                 phone: "Appelez-nous",
+
                 info: "Info",
                 privateEmail: "E-mail privé",
+
                 review: "Nous évaluer sur Google",
+
                 footer: "Des. by: Mansour khalifa"
             },
 
@@ -1078,30 +1208,39 @@
                 title: "YALLAH SPORT",
                 location: "Hurgada, Rdeče morje",
                 subtitle: "Vse, kar potrebujete za kajtanje",
+
                 facebook: "Facebook",
                 instagram: "Instagram",
                 youtube: "YouTube",
                 website: "Uradna spletna stran",
                 whatsapp: "WhatsApp",
                 phone: "Pokličite nas",
+
                 info: "Info",
                 privateEmail: "Zasebni e-poštni naslov",
+
                 review: "Ocenite nas na Googlu",
+
                 footer: "Des. by: Mansour khalifa"
             }
 
         };
 
 
-        /* DETECT LANGUAGE */
+        /* =====================================================
+           DETECT LANGUAGE
+        ===================================================== */
 
         function detectLanguage() {
 
             const languages = [
+
                 ...(navigator.languages || []),
+
                 navigator.language ||
                 navigator.userLanguage ||
                 "en"
+
             ];
 
             for (const browserLang of languages) {
@@ -1123,13 +1262,16 @@
 
                 if (lang.startsWith("en"))
                     return "en";
+
             }
 
             return "en";
         }
 
 
-        /* ACTIVE LANGUAGE BUTTON */
+        /* =====================================================
+           ACTIVE BUTTON
+        ===================================================== */
 
         function setActiveLanguageButton(lang) {
 
@@ -1147,7 +1289,9 @@
         }
 
 
-        /* APPLY LANGUAGE */
+        /* =====================================================
+           APPLY LANGUAGE
+        ===================================================== */
 
         function applyLanguage(lang) {
 
@@ -1155,43 +1299,20 @@
                 translations[lang] ||
                 translations.en;
 
+
             document
                 .getElementById("title")
                 .textContent = t.title;
+
 
             document
                 .getElementById("location")
                 .textContent = t.location;
 
+
             document
                 .getElementById("subtitle")
                 .textContent = t.subtitle;
-
-
-            const footer =
-                document.getElementById("footer");
-
-            if (footer) {
-
-                const firstTextNode =
-                    Array.from(
-                        footer.childNodes
-                    ).find(
-                        node =>
-                            node.nodeType ===
-                            Node.TEXT_NODE
-                    );
-
-                if (firstTextNode) {
-
-                    firstTextNode.textContent =
-                        "\n            " +
-                        t.footer +
-                        "\n            ";
-
-                }
-
-            }
 
 
             document
@@ -1213,8 +1334,37 @@
                 });
 
 
+            const footer =
+                document.getElementById("footer");
+
+
+            if (footer) {
+
+                const textNode =
+                    Array.from(
+                        footer.childNodes
+                    ).find(
+                        node =>
+                            node.nodeType ===
+                            Node.TEXT_NODE
+                    );
+
+
+                if (textNode) {
+
+                    textNode.textContent =
+                        "\n            " +
+                        t.footer +
+                        "\n            ";
+
+                }
+
+            }
+
+
             document.documentElement.lang =
                 lang;
+
 
             document.documentElement.dir =
                 lang === "ar"
@@ -1237,7 +1387,9 @@
         }
 
 
-        /* MANUAL LANGUAGE BUTTONS */
+        /* =====================================================
+           MANUAL LANGUAGE BUTTONS
+        ===================================================== */
 
         document
             .querySelectorAll(".lang-btn")
@@ -1249,6 +1401,7 @@
 
                         const lang =
                             button.dataset.lang;
+
 
                         if (
                             translations[lang]
@@ -1264,9 +1417,12 @@
             });
 
 
-        /* INITIAL LANGUAGE */
+        /* =====================================================
+           INITIAL LANGUAGE
+        ===================================================== */
 
         let initialLanguage = null;
+
 
         try {
 
@@ -1290,13 +1446,16 @@
         );
 
 
-        /* LANGUAGE CHANGE */
+        /* =====================================================
+           LANGUAGE CHANGE
+        ===================================================== */
 
         window.addEventListener(
             "languagechange",
             () => {
 
                 let savedLanguage = null;
+
 
                 try {
 
