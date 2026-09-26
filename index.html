@@ -1053,9 +1053,10 @@
 
             <a
                 class="link email"
-                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=info%40yallah-sport.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info%40yallah-sport.com"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                onclick="openGmailWeb(event, 'info%40yallah-sport.com')">
 
                 <i class="fa-solid fa-envelope main-icon"></i>
 
@@ -1073,9 +1074,10 @@
 
             <a
                 class="link email"
-                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=mosty.hurghada%40gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=mosty.hurghada%40gmail.com"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                onclick="openGmailWeb(event, 'mosty.hurghada%40gmail.com')">
 
                 <i class="fa-solid fa-envelope main-icon"></i>
 
@@ -1447,6 +1449,31 @@
 
 
         /* =====================================================
+           GMAIL WEB
+           يفتح Gmail Web في المتصفح بدون mailto
+        ===================================================== */
+
+        function openGmailWeb(event, email) {
+            event.preventDefault();
+
+            const gmailUrl =
+                "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" + email;
+
+            // فتح Gmail Web في تبويب جديد
+            const newWindow = window.open(
+                gmailUrl,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+            // إذا منع المتصفح التبويب الجديد، افتح نفس الصفحة
+            if (!newWindow) {
+                window.location.href = gmailUrl;
+            }
+        }
+
+
+        /* =====================================================
            LANGUAGE CHANGE
         ===================================================== */
 
@@ -1483,4 +1510,3 @@
 </body>
 
 </html>
-
